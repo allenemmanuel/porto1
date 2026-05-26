@@ -28,8 +28,19 @@
     });
   }
 
-  // Header menu toggle (mobile)
+  // Fixed header offset (prevents content sitting under navbar)
   const header = document.querySelector(".site-header");
+  const updateHeaderOffset = () => {
+    if (!header) return;
+    root.style.setProperty("--header-offset", `${header.offsetHeight}px`);
+  };
+  updateHeaderOffset();
+  window.addEventListener("resize", updateHeaderOffset);
+  if (document.fonts?.ready) {
+    document.fonts.ready.then(updateHeaderOffset).catch(() => {});
+  }
+
+  // Header menu toggle (mobile)
   const toggle = document.querySelector("[data-menu-toggle]");
   const nav = document.querySelector("#site-nav");
 
@@ -37,6 +48,7 @@
     const setOpen = (open) => {
       header.setAttribute("data-menu-open", open ? "true" : "false");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      requestAnimationFrame(updateHeaderOffset);
     };
 
     toggle.addEventListener("click", () => {
