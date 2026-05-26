@@ -1,5 +1,32 @@
 (() => {
   const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+  const prefersLight = window.matchMedia?.("(prefers-color-scheme: light)")?.matches;
+
+  // Theme (dark/light)
+  const root = document.documentElement;
+  const storedTheme = (() => {
+    try { return localStorage.getItem("theme"); } catch { return null; }
+  })();
+  const initialTheme = storedTheme || (prefersLight ? "light" : "dark");
+  root.setAttribute("data-theme", initialTheme);
+
+  const themeBtn = document.querySelector("[data-theme-toggle]");
+  const setTheme = (theme) => {
+    root.setAttribute("data-theme", theme);
+    try { localStorage.setItem("theme", theme); } catch {}
+    if (themeBtn) {
+      const isLight = theme === "light";
+      themeBtn.setAttribute("aria-pressed", isLight ? "true" : "false");
+      themeBtn.textContent = isLight ? "Light" : "Dark";
+    }
+  };
+  if (themeBtn) {
+    setTheme(initialTheme);
+    themeBtn.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme") || "dark";
+      setTheme(current === "light" ? "dark" : "light");
+    });
+  }
 
   // Header menu toggle (mobile)
   const header = document.querySelector(".site-header");
