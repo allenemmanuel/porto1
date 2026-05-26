@@ -44,8 +44,10 @@ a{ color: inherit; }
 }
 
 .site-header{
-	position: sticky;
+	position: fixed;
 	top: 0;
+	left: 0;
+	right: 0;
 	z-index: 20;
 	backdrop-filter: blur(10px);
 	background: rgba(7,10,18,0.55);
@@ -114,7 +116,8 @@ a{ color: inherit; }
 }
 
 .site-main{
-	padding: 48px 0 26px;
+	/* Header is fixed; offset main content */
+	padding: 96px 0 26px;
 }
 
 .card{
