@@ -3,34 +3,90 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Guppy Home</title>
+	<title>Guppy Diary | Home</title>
+	<meta name="description" content="A clean, modern portfolio-style site for Guppy Diary: images, videos, and a short story behind the hobby.">
+	<meta property="og:title" content="Guppy Diary">
+	<meta property="og:description" content="Images, videos, and a short story behind the Guppy Diary.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="images/bg.jpg">
+	<link rel="icon" href="images/color.jpg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
 </head>
 <body>
 
 <div class="background">
-	<div class="layout">
-		<nav class="nav" aria-label="Primary">
-			<a class="a active" href="index.html" aria-current="page">HOME</a>
-			<a class="b" href="aboutme.html">ABOUT ME</a>
-			<a class="c" href="images.html">IMAGES</a>
-			<a class="d" href="videos.html">VIDEOS</a>
-		</nav>
+	<header class="site-header" data-menu-open="false">
+		<div class="container header-inner">
+			<a class="brand" href="index.html" aria-label="Guppy Diary home">
+				<span class="brand-title">Guppy Diary</span>
+				<span class="brand-tag">Images • Videos • Story</span>
+			</a>
 
-		<main class="content" id="main">
-			<section class="home" aria-labelledby="home-title">
-				<p class="quote">
-					"Give a man a fish,<br>
-					and you feed him for a day.<br>
-					Teach a man to fish,<br>
-					and you feed him for a lifetime."
-				</p>
-				<h1 id="home-title">Guppy</h1>
-				<h3>A Guppy Diary</h3>
+			<button class="nav-toggle" type="button" data-menu-toggle aria-controls="site-nav" aria-expanded="false">
+				Menu
+			</button>
+
+			<nav id="site-nav" class="nav-links" aria-label="Primary navigation">
+				<a class="active" href="index.html" aria-current="page">Home</a>
+				<a href="aboutme.html">About</a>
+				<a href="images.html">Gallery</a>
+				<a href="videos.html">Videos</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="site-main">
+		<div class="container">
+			<section class="home card" aria-labelledby="home-title">
+				<div>
+					<p class="quote">
+						"Give a man a fish, and you feed him for a day.<br>
+						Teach a man to fish, and you feed him for a lifetime."
+					</p>
+					<h1 id="home-title">Guppy</h1>
+					<h3>A Guppy Diary</h3>
+
+					<div class="hero-actions">
+						<a class="btn primary" href="images.html">View Gallery</a>
+						<a class="btn" href="videos.html">Watch Videos</a>
+						<a class="btn" href="aboutme.html">About Me</a>
+					</div>
+				</div>
+
+				<aside class="hero-side" aria-label="Highlights">
+					<div class="stat">
+						<strong>Fast & responsive</strong>
+						<span>Built to look great on mobile and desktop.</span>
+					</div>
+					<div class="stat">
+						<strong>Clean visuals</strong>
+						<span>Glass cards + consistent typography.</span>
+					</div>
+					<div class="stat">
+						<strong>Story + media</strong>
+						<span>Photos, videos, and the hobby behind it.</span>
+					</div>
+				</aside>
 			</section>
-		</main>
-	</div>
+		</div>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<div>© <span id="year"></span> Guppy Diary</div>
+			<div class="footer-links">
+				<a href="images.html">Gallery</a>
+				<a href="videos.html">Videos</a>
+				<a href="aboutme.html">About</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/main.js"></script>
 
 </body>
 </html>

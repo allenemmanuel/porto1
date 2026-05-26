@@ -4,33 +4,56 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Videos | Guppy Diary</title>
+	<meta name="description" content="Watch guppy videos — local clip and a YouTube embed. Clean, responsive layout.">
+	<meta property="og:title" content="Videos | Guppy Diary">
+	<meta property="og:description" content="Watch guppy videos — local clip and YouTube embed.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="images/bg.jpg">
+	<link rel="icon" href="images/color.jpg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css"> 
 	<script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
 </head>
 <body>
 
 <div class="background">
-	<div class="layout">
-		<nav class="nav" aria-label="Primary">
-			<a class="a" href="index.html">HOME</a>
-			<a class="b" href="aboutme.html">ABOUT ME</a>
-			<a class="c" href="images.html">IMAGES</a>
-			<a class="d active" href="videos.html" aria-current="page">VIDEOS</a>
-		</nav>
+	<header class="site-header" data-menu-open="false">
+		<div class="container header-inner">
+			<a class="brand" href="index.html" aria-label="Guppy Diary home">
+				<span class="brand-title">Guppy Diary</span>
+				<span class="brand-tag">Images • Videos • Story</span>
+			</a>
 
-		<main class="content" id="main">
+			<button class="nav-toggle" type="button" data-menu-toggle aria-controls="site-nav" aria-expanded="false">
+				Menu
+			</button>
+
+			<nav id="site-nav" class="nav-links" aria-label="Primary navigation">
+				<a href="index.html">Home</a>
+				<a href="aboutme.html">About</a>
+				<a href="images.html">Gallery</a>
+				<a class="active" href="videos.html" aria-current="page">Videos</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="site-main">
+		<div class="container">
 			<section class="videos" aria-labelledby="videos-title">
-				<h1 id="videos-title">Play 'Em</h1>
+				<h1 id="videos-title" class="section-title">Videos</h1>
+				<p class="lead">Local clip loads with metadata only (faster). The YouTube embed stays responsive on mobile.</p>
 
 				<div class="video-grid">
-					<figure class="video-card">
+					<figure class="video-card card">
 						<video class="video" controls preload="metadata">
 							<source src="video.mp4" type="video/mp4">
 						</video>
 						<figcaption>Local video</figcaption>
 					</figure>
 
-					<figure class="video-card">
+					<figure class="video-card card">
 						<div class="embed">
 							<iframe
 								src="https://www.youtube.com/embed/IJX3b6Yik48"
@@ -44,8 +67,21 @@
 					</figure>
 				</div>
 			</section>
-		</main>
-	</div>
+		</div>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<div>© <span id="year"></span> Guppy Diary</div>
+			<div class="footer-links">
+				<a href="index.html">Home</a>
+				<a href="images.html">Gallery</a>
+				<a href="aboutme.html">About</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/main.js"></script>
 
 
 

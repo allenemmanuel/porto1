@@ -3,24 +3,46 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>About Me | Allen Emmanuel</title>
+	<title>About | Allen Emmanuel</title>
+	<meta name="description" content="About Allen Emmanuel — Computer Science student. Skills, projects, and contact links.">
+	<meta property="og:title" content="About | Allen Emmanuel">
+	<meta property="og:description" content="Skills, projects, and contact links.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="images/bg.jpg">
+	<link rel="icon" href="images/color.jpg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
 </head>
 <body>
 
 <div class="background">
-	<div class="layout">
-		<nav class="nav" aria-label="Primary">
-			<a class="a" href="index.html">HOME</a>
-			<a class="b active" href="aboutme.html" aria-current="page">ABOUT ME</a>
-			<a class="c" href="images.html">IMAGES</a>
-			<a class="d" href="videos.html">VIDEOS</a>
-		</nav>
+	<header class="site-header" data-menu-open="false">
+		<div class="container header-inner">
+			<a class="brand" href="index.html" aria-label="Guppy Diary home">
+				<span class="brand-title">Guppy Diary</span>
+				<span class="brand-tag">Images • Videos • Story</span>
+			</a>
 
-		<main class="content" id="main">
+			<button class="nav-toggle" type="button" data-menu-toggle aria-controls="site-nav" aria-expanded="false">
+				Menu
+			</button>
+
+			<nav id="site-nav" class="nav-links" aria-label="Primary navigation">
+				<a href="index.html">Home</a>
+				<a class="active" href="aboutme.html" aria-current="page">About</a>
+				<a href="images.html">Gallery</a>
+				<a href="videos.html">Videos</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="site-main">
+		<div class="container">
 			<section class="aboutme">
-				<div class="box">
+				<div class="box card" aria-label="Profile card">
 					<img
 						src="how2.jpeg"
 						class="box-img"
@@ -29,24 +51,63 @@
 						alt="Portrait of Allen Emmanuel"
 						loading="lazy"
 					>
-					<h1>Allen Emmanuel</h1>
-					<h5>Computer Science Student</h5>
-					<ul class="social" aria-label="Social links">
-						<li>
-							<a href="https://www.facebook.com/allen.emmannuel" aria-label="Facebook profile">
-								<i class="fa fa-facebook-square" aria-hidden="true"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.instagram.com/allenemmanuel_/" aria-label="Instagram profile">
-								<i class="fa fa-instagram" aria-hidden="true"></i>
-							</a>
-						</li>
-					</ul>
+					<div>
+						<h1 class="section-title">Allen Emmanuel</h1>
+						<p class="lead">Computer Science student building clean, user-friendly web experiences.</p>
+
+						<div class="hero-actions" aria-label="Quick links">
+							<a class="btn primary" href="mailto:allen.emmannuel@gmail.com">Email me</a>
+							<a class="btn" href="images.html">See Gallery</a>
+							<a class="btn" href="videos.html">See Videos</a>
+						</div>
+
+						<ul class="social" aria-label="Social links">
+							<li>
+								<a href="https://www.facebook.com/allen.emmannuel" aria-label="Facebook profile">
+									<i class="fa fa-facebook-square" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/allenemmanuel_/" aria-label="Instagram profile">
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
+
+				<section class="card" style="padding: 24px; margin-top: 18px;">
+					<h2 class="section-title" style="font-size: 22px;">About</h2>
+					<p class="lead">
+						I enjoy turning ideas into simple, polished interfaces. This site is a small project that combines my interest in design with a hobby I love.
+					</p>
+				</section>
+
+				<section class="card" style="padding: 24px; margin-top: 18px;">
+					<h2 class="section-title" style="font-size: 22px;">Skills</h2>
+					<p class="lead">HTML • CSS • Responsive Design • Accessibility basics • Git/GitHub</p>
+				</section>
+
+				<section class="card" style="padding: 24px; margin-top: 18px;">
+					<h2 class="section-title" style="font-size: 22px;">Projects</h2>
+					<p class="lead">Guppy Diary (this site) — a small, fast static site with gallery + video page.</p>
+				</section>
 			</section>
-		</main>
-	</div>
+		</div>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<div>© <span id="year"></span> Guppy Diary</div>
+			<div class="footer-links">
+				<a href="images.html">Gallery</a>
+				<a href="videos.html">Videos</a>
+				<a href="index.html">Home</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/main.js"></script>
 
 
 

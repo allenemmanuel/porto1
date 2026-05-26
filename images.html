@@ -4,52 +4,112 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Images | Guppy Diary</title>
+	<meta name="description" content="A curated gallery of favorite guppy varieties — tuxedo, mosaic, and platinum.">
+	<meta property="og:title" content="Gallery | Guppy Diary">
+	<meta property="og:description" content="A curated gallery of favorite guppy varieties.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="images/bg.jpg">
+	<link rel="icon" href="images/color.jpg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
 </head>
 <body>
 
 <div class="background">
-	<div class="layout">
-		<nav class="nav" aria-label="Primary">
-			<a class="a" href="index.html">HOME</a>
-			<a class="b" href="aboutme.html">ABOUT ME</a>
-			<a class="c active" href="images.html" aria-current="page">IMAGES</a>
-			<a class="d" href="videos.html">VIDEOS</a>
-		</nav>
+	<header class="site-header" data-menu-open="false">
+		<div class="container header-inner">
+			<a class="brand" href="index.html" aria-label="Guppy Diary home">
+				<span class="brand-title">Guppy Diary</span>
+				<span class="brand-tag">Images • Videos • Story</span>
+			</a>
 
-		<main class="content" id="main">
+			<button class="nav-toggle" type="button" data-menu-toggle aria-controls="site-nav" aria-expanded="false">
+				Menu
+			</button>
+
+			<nav id="site-nav" class="nav-links" aria-label="Primary navigation">
+				<a href="index.html">Home</a>
+				<a href="aboutme.html">About</a>
+				<a class="active" href="images.html" aria-current="page">Gallery</a>
+				<a href="videos.html">Videos</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="site-main">
+		<div class="container">
 			<section class="gallery" aria-labelledby="gallery-title">
-				<h1 id="gallery-title">All Time Favourite</h1>
+				<h1 id="gallery-title" class="section-title">Gallery</h1>
+				<p class="lead">Tap any image to view it in a lightbox. Optimized layout that feels modern on both desktop and mobile.</p>
 
-				<div class="gallery-grid">
-					<article class="card">
-						<div class="card-images">
-							<img src="tux.jpg" width="115" height="175" alt="Tuxedo guppy" loading="lazy">
-							<img src="tux5.jpg" width="115" height="175" alt="Tuxedo guppy (variant)" loading="lazy">
+				<div class="gallery-grid" aria-label="Guppy gallery">
+					<article class="card gallery-item">
+						<div class="gallery-thumbs">
+							<button type="button" data-lightbox-src="tux.jpg" data-lightbox-title="Tuxedo guppy">
+								<img src="tux.jpg" width="115" height="175" alt="Tuxedo guppy" loading="lazy">
+							</button>
+							<button type="button" data-lightbox-src="tux5.jpg" data-lightbox-title="Tuxedo guppy (variant)">
+								<img src="tux5.jpg" width="115" height="175" alt="Tuxedo guppy (variant)" loading="lazy">
+							</button>
 						</div>
 						<h3>Tuxedo Guppy</h3>
 					</article>
 
-					<article class="card">
-						<div class="card-images">
-							<img src="mosaic1.jpg" width="115" height="175" alt="Mosaic guppy" loading="lazy">
-							<img src="mosaic2.jpg" width="115" height="175" alt="Mosaic guppy (variant)" loading="lazy">
+					<article class="card gallery-item">
+						<div class="gallery-thumbs">
+							<button type="button" data-lightbox-src="mosaic1.jpg" data-lightbox-title="Mosaic guppy">
+								<img src="mosaic1.jpg" width="115" height="175" alt="Mosaic guppy" loading="lazy">
+							</button>
+							<button type="button" data-lightbox-src="mosaic2.jpg" data-lightbox-title="Mosaic guppy (variant)">
+								<img src="mosaic2.jpg" width="115" height="175" alt="Mosaic guppy (variant)" loading="lazy">
+							</button>
 						</div>
 						<h3>Mosaic Guppy</h3>
 					</article>
 
-					<article class="card">
-						<div class="card-images">
-							<img src="plati2.jpg" width="115" height="175" alt="Platinum guppy" loading="lazy">
-							<img src="plat2.jpg" width="115" height="175" alt="Platinum guppy (variant)" loading="lazy">
+					<article class="card gallery-item">
+						<div class="gallery-thumbs">
+							<button type="button" data-lightbox-src="plati2.jpg" data-lightbox-title="Platinum guppy">
+								<img src="plati2.jpg" width="115" height="175" alt="Platinum guppy" loading="lazy">
+							</button>
+							<button type="button" data-lightbox-src="plat2.jpg" data-lightbox-title="Platinum guppy (variant)">
+								<img src="plat2.jpg" width="115" height="175" alt="Platinum guppy (variant)" loading="lazy">
+							</button>
 						</div>
 						<h3>Platinum Guppy</h3>
 					</article>
 				</div>
 			</section>
-		</main>
+		</div>
+	</main>
+
+	<div class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image lightbox">
+		<div class="lightbox-dialog card">
+			<div class="lightbox-header">
+				<div class="lightbox-title" data-lightbox-caption>Preview</div>
+				<button class="lightbox-close" type="button" data-lightbox-close aria-label="Close">Close</button>
+			</div>
+			<div class="lightbox-body">
+				<img src="" alt="" data-lightbox-image>
+			</div>
+		</div>
 	</div>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<div>© <span id="year"></span> Guppy Diary</div>
+			<div class="footer-links">
+				<a href="index.html">Home</a>
+				<a href="videos.html">Videos</a>
+				<a href="aboutme.html">About</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/main.js"></script>
 
 
 
