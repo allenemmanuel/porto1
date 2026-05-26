@@ -1,64 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta charset="utf-8">
-    <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
-    <title>Personal WebSite</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Images | Guppy Diary</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
 </head>
 <body>
 
 <div class="background">
-<div class="nav">
-	<a class="a" href="index.html">HOME</a>
-	<a class="b" href="aboutme.html">ABOUT ME</a>
-	<a class="c" href="images.html">IMAGES</a>
-	<a class="d" href="videos.html">VIDEOS</a>
-</div>
+	<div class="layout">
+		<nav class="nav" aria-label="Primary">
+			<a class="a" href="index.html">HOME</a>
+			<a class="b" href="aboutme.html">ABOUT ME</a>
+			<a class="c active" href="images.html" aria-current="page">IMAGES</a>
+			<a class="d" href="videos.html">VIDEOS</a>
+		</nav>
 
-<div class="content">
-	
-	
+		<main class="content" id="main">
+			<section class="gallery" aria-labelledby="gallery-title">
+				<h1 id="gallery-title">All Time Favourite</h1>
 
-	<div class="gallery">
-		<h5>All Time Favourite</h5>
-		
-		<div class="box1" >
-		<div class="image">
-			<img src="tux.jpg" class="box-img" width="115" height="175" >
-		</div>
-		<div class="image">
-			<img src="tux5.jpg" class="box-img" width="115" height="175" >
-		</div>
-		<h3>Tuxedo Guppy</h3>
-		</div>
-		
-		<div class="box2">
-		<div class="image">
-			<img src="mosaic1.jpg" class="box-img" width="115" height="175">
-		</div>
-		<div class="image">
-			<img src="mosaic2.jpg" class="box-img" width="115" height="175">
-		</div>
-		<h3>Mosaic Guppy</h3>
-		</div>
-		
-		
-		<div class="box3">
-		<div class="image">
-			<img src="plati2.jpg" class="box-img" width="115" height="175">
-		</div>
-		<div class="image">
-			<img src="plat2.jpg" class="box-img" width="115" height="175">
-		</div>
-		<h3>Platinum Guppy</h3>
-		</div>
-		<br><br><br><br><br><br><br><br>
-		
+				<div class="gallery-grid">
+					<article class="card">
+						<div class="card-images">
+							<img src="tux.jpg" width="115" height="175" alt="Tuxedo guppy" loading="lazy">
+							<img src="tux5.jpg" width="115" height="175" alt="Tuxedo guppy (variant)" loading="lazy">
+						</div>
+						<h3>Tuxedo Guppy</h3>
+					</article>
+
+					<article class="card">
+						<div class="card-images">
+							<img src="mosaic1.jpg" width="115" height="175" alt="Mosaic guppy" loading="lazy">
+							<img src="mosaic2.jpg" width="115" height="175" alt="Mosaic guppy (variant)" loading="lazy">
+						</div>
+						<h3>Mosaic Guppy</h3>
+					</article>
+
+					<article class="card">
+						<div class="card-images">
+							<img src="plati2.jpg" width="115" height="175" alt="Platinum guppy" loading="lazy">
+							<img src="plat2.jpg" width="115" height="175" alt="Platinum guppy (variant)" loading="lazy">
+						</div>
+						<h3>Platinum Guppy</h3>
+					</article>
+				</div>
+			</section>
+		</main>
 	</div>
-	
-</div>
 
 
 
