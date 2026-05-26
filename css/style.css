@@ -35,7 +35,6 @@ a{ color: inherit; }
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	overflow-y: auto;
 	color: var(--text);
 }
 
@@ -367,22 +366,10 @@ a{ color: inherit; }
 .footer-inner{
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	gap: 16px;
 	padding-top: 18px;
 	border-top: 1px solid rgba(255,255,255,0.1);
-}
-.footer-links{
-	display: flex;
-	gap: 12px;
-	flex-wrap: wrap;
-}
-.footer-links a{
-	text-decoration: none;
-	padding: 8px 10px;
-	border-radius: 12px;
-	border: 1px solid rgba(255,255,255,0.12);
-	background: rgba(255,255,255,0.05);
 }
 
 /* Lightbox */
@@ -472,6 +459,6 @@ a{ color: inherit; }
 	}
 	.footer-inner{
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
 	}
 }
